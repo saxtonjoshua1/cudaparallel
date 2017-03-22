@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <fcntl.h>
 #include <unistd.h>
-#include "timer.h"
+#include <iostream>
+#include <fstream>
 
 void fatal_error (const char* message);
 // precondition: message is not NULL
@@ -18,9 +18,7 @@ int main (int argc, char** argv)
     fatal_error("assn2 <num_intervals> <file\n");
   
   int num_intervals= (int) strtol(argv[1], (char **)NULL, 10);
-
-  int min = 0;
-  int max = 1; 
+  char file_name = (char) strtol(argv[2], (char **)) 
 
   return 0;
 }
@@ -39,4 +37,6 @@ char* create_error_string (const char* message, const char* data_string)
   snprintf (result, 60, message, data_string);
   return result;
 }
+
+
 
